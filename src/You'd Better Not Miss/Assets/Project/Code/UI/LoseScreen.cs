@@ -19,10 +19,10 @@ namespace Code
             _canvasGroup.alpha = 0f;
             _panel.localScale = Vector3.zero;
 
-            Sequence sequence = DOTween.Sequence();
+            Sequence sequence = DOTween.Sequence().SetUpdate(true);
 
-            sequence.Append(_canvasGroup.DOFade(1f, 0.6f));
-            sequence.Join(_panel.DOScale(1f, 0.6f).SetEase(Ease.OutBounce));
+            sequence.Append(_canvasGroup.DOFade(1f, 0.6f).SetLink(gameObject));
+            sequence.Join(_panel.DOScale(1f, 0.6f).SetEase(Ease.OutBounce).SetLink(gameObject));
         }
 
         public void Restart()

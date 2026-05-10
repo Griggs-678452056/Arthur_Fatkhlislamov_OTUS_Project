@@ -18,8 +18,8 @@ namespace Code
 
         public void Init(Transform player, WinLoseController winLoseController)
         {
-            player = _player;
-            winLoseController = _winLoseController;
+            _player = player;
+            _winLoseController = winLoseController;
 
             StartCoroutine(SpawnRoutine());
         }

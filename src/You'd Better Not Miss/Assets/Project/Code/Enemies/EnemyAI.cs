@@ -22,6 +22,7 @@ namespace Code
             if (target == null)
             {
                 Debug.LogError("TARGET IS NULL");
+                return;
             }
 
             _target = target;
@@ -60,7 +61,6 @@ namespace Code
 
             if (distance <= _attackDistance)
             {
-                _animator.PlayAttack();
                 TryAttack();
             }
         }
@@ -73,6 +73,8 @@ namespace Code
             }
 
             _lastAttackTime = Time.time;
+
+            _animator.PlayAttack();
 
             _playerHealth?.TakeDamage(_damage);
         }
