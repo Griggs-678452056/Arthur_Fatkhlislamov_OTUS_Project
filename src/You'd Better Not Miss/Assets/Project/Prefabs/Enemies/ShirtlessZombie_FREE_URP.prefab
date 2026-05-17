@@ -2630,7 +2630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47be993e317a50a44aca44680998ba9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Code.EnemyHealth
-  _maxHealth: 60
+  _maxHealth: 100
   _animator: {fileID: 7039716627680112569}
 --- !u!95 &1655970613192649509
 Animator:
@@ -2704,9 +2704,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 1
+  m_Height: 1.9
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!195 &4216727504795940218
 NavMeshAgent:
   m_ObjectHideFlags: 0
