@@ -8,6 +8,22 @@ namespace Code
 
         private float _currentHealth;
 
+        public float MaxHealth
+        {
+            get
+            {
+                return _maxHealth;
+            }
+        }
+
+        public float CurrentHealth
+        {
+            get
+            {
+                return _currentHealth;
+            }
+        }
+
         private bool IsDead
         {
             get
@@ -21,7 +37,7 @@ namespace Code
             _currentHealth = _maxHealth;
         }
 
-        public void TakeDamage(float damage)
+        public virtual void TakeDamage(float damage)
         {
             if (IsDead)
             {

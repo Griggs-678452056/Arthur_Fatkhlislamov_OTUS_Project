@@ -5,7 +5,7 @@ namespace Code
 {
     public class EnemySpawner : MonoBehaviour
     {
-        [SerializeField] private GameObject _zombiePrefab;
+        [SerializeField] private EnemyPool _enemyPool;
         [SerializeField] private Transform[] _spawnPoints;
         [SerializeField] private int _totalEnemies = 10;
         [SerializeField] private float _spawnDelay = 1f;
@@ -40,12 +40,13 @@ namespace Code
         {
             var point = _spawnPoints[Random.Range(0, _spawnPoints.Length)];
 
-            var enemyGO = Instantiate(_zombiePrefab, point.position, Quaternion.identity);
+            var enemyGO = _enemyPool.Get(point.position, point.rotation);
 
             var ai = enemyGO.GetComponent<EnemyAI>();
             ai.Init(_player);
 
             var health = enemyGO.GetComponent<EnemyHealth>();
+            health.OnDeath -= OnEnemyDeath;
             health.OnDeath += OnEnemyDeath;
         }
 
@@ -54,6 +55,8 @@ namespace Code
             enemy.OnDeath -= OnEnemyDeath;
 
             _alive--;
+
+            _enemyPool.Return(enemy.gameObject);
 
             if (_spawned >= _totalEnemies && _alive <= 0)
             {

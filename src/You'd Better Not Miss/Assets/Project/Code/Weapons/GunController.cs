@@ -10,6 +10,8 @@ namespace Code
 
         [SerializeField] private MonoBehaviour _weaponBehaviour;
 
+        [SerializeField] private UIController _uiController;
+
         private IWeapon _weapon;
         private PlayerInputHandler _input;
         private WeaponRuntime _runtime = new WeaponRuntime();
@@ -23,6 +25,10 @@ namespace Code
         {
             _input = GetComponent<PlayerInputHandler>();
             _runtime.Init(_weaponConfig);
+
+            _uiController.SetAmmo(
+                _runtime.CurrentAmmo,
+                _weaponConfig.MagazineSize);
 
             _weapon = _weaponBehaviour as IWeapon;
 
@@ -64,6 +70,9 @@ namespace Code
             _nextFireTime = Time.time + _weaponConfig.FireRate;
 
             _runtime.ConsumeAmmo();
+            _uiController.SetAmmo(
+                _runtime.CurrentAmmo,
+                _weaponConfig.MagazineSize);
 
             _weapon.Shoot(_runtime.Damage);
 
@@ -111,6 +120,9 @@ namespace Code
                     );
 
                 _runtime.Reload();
+                _uiController.SetAmmo(
+                _runtime.CurrentAmmo,
+                _weaponConfig.MagazineSize);
 
                 Debug.Log("Перезарядка завершена");
             }

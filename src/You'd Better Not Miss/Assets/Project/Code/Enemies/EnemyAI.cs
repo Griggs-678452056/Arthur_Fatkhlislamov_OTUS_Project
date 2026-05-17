@@ -7,7 +7,8 @@ namespace Code
     {
         [SerializeField] private float _attackDistance = 2f;
         [SerializeField] private float _attackCooldown = 1f;
-        [SerializeField] private int _damage = 10;
+        [SerializeField] private float _damage = 10f;
+        [SerializeField] private float _detectionDistance = 5f;
 
         [SerializeField] private EnemyAnimator _animator;
 
@@ -16,6 +17,17 @@ namespace Code
         private IDamageable _playerHealth;
 
         private float _lastAttackTime;
+
+        private void OnEnable()
+        {
+            if (_agent != null)
+            {
+                _agent.isStopped = false;
+                _agent.ResetPath();
+            }
+
+            _lastAttackTime = 0;
+        }
 
         public void Init(Transform target)
         {
@@ -28,15 +40,6 @@ namespace Code
             _target = target;
 
             _playerHealth = target.GetComponent<IDamageable>();
-
-            if (_playerHealth == null )
-            {
-                Debug.LogError("IDamageable NOT FOUND ON PLAYER");
-            }
-            else
-            {
-                Debug.Log("Player damageable OK");
-            }
         }
 
         private void Awake()
@@ -52,22 +55,37 @@ namespace Code
                 return;
             }
 
-            _agent.SetDestination(_target.position);
-
-            float speed = _agent.velocity.magnitude;
-            _animator.SetSpeed(speed);
-
             float distance = Vector3.Distance(transform.position, _target.position);
 
             if (distance <= _attackDistance)
             {
+                _agent.isStopped = true;
+
+                _animator.SetSpeed(0);
+
                 TryAttack();
+            }
+            else if (distance <= _detectionDistance)
+            {
+                _agent.isStopped = false;
+
+                _agent.SetDestination(_target.position);
+
+                float speed = _agent.velocity.magnitude;
+
+                _animator.SetSpeed(speed);
+            }
+            else
+            {
+                _agent.isStopped = true;
+
+                _animator.SetSpeed(0);
             }
         }
 
         private void TryAttack()
         {
-            if(Time.time < _lastAttackTime + _attackCooldown)
+            if (Time.time < _lastAttackTime + _attackCooldown)
             {
                 return;
             }
@@ -75,8 +93,34 @@ namespace Code
             _lastAttackTime = Time.time;
 
             _animator.PlayAttack();
+        }
 
-            _playerHealth?.TakeDamage(_damage);
+        public void DealDamage()
+        {
+            if (_target == null)
+            {
+                return;
+            }
+
+            float distance = Vector3.Distance(transform.position, _target.position);
+
+            if (distance <= _attackDistance + 0.3f)
+            {
+                _playerHealth?.TakeDamage(_damage);
+            }
+        }
+
+        public void ResetEnemy()
+        {
+            _target = null;
+
+            if (_agent != null)
+            {
+                _agent.isStopped = true;
+                _agent.ResetPath();
+            }
+
+            _animator.SetSpeed(0);
         }
     }
 }

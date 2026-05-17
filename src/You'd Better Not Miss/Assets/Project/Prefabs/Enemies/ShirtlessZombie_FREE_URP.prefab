@@ -2603,6 +2603,7 @@ MonoBehaviour:
   _attackDistance: 1
   _attackCooldown: 1
   _damage: 5
+  _detectionDistance: 5
   _animator: {fileID: 7039716627680112569}
 --- !u!114 &7039716627680112569
 MonoBehaviour:
@@ -2629,7 +2630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47be993e317a50a44aca44680998ba9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Code.EnemyHealth
-  _maxHealth: 100
+  _maxHealth: 60
   _animator: {fileID: 7039716627680112569}
 --- !u!95 &1655970613192649509
 Animator:
@@ -2644,7 +2645,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 2159f4534e9bae540a14e27e0674daf0, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -2716,7 +2717,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
