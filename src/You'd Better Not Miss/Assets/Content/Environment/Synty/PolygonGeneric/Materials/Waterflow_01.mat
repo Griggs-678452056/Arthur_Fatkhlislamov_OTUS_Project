@@ -27,7 +27,6 @@ Material:
   m_ValidKeywords:
   - _ALPHATEST_ON
   - _BUILTIN_ALPHATEST_ON
-  - _BUILTIN_AlphaClip
   - _OVERLAY_UV_CHANNEL_UV0
   m_InvalidKeywords:
   - _EMISSION
@@ -112,7 +111,7 @@ Material:
     - _AO_Intensity: 1
     - _AlphaClip: 1
     - _AlphaToMask: 1
-    - _BUILTIN_AlphaClip: 1
+    - _BUILTIN_AlphaClip: 0
     - _BUILTIN_Blend: 0
     - _BUILTIN_CullMode: 2
     - _BUILTIN_DstBlend: 0

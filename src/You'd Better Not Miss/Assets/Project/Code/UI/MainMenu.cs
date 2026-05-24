@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
 
     private void StartClicked()
     {
-        SceneManager.LoadScene("Run");
+        SceneManager.LoadScene("Level_1");
 
         Time.timeScale = 1.0f;
 
