@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace Code
 {
-    public class EnemySpawner : MonoBehaviour
+    public class EnemySpawner : MonoBehaviour // убрать пул врагов, скрипт EnemyPool сохранить на всякий случай
     {
         [SerializeField] private EnemyPool _enemyPool;
         [SerializeField] private Transform[] _spawnPoints;
