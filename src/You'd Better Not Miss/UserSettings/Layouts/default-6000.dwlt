@@ -354,8 +354,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Animator\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 459
-    y: 749
+    x: 1
+    y: 694
     width: 826
     height: 237
   m_SerializedDataModeController:
@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 43
+    y: 0
     width: 1920
     height: 36
   m_SerializedDataModeController:
@@ -734,7 +734,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79
+    y: 24
     width: 458
     height: 459
   m_SerializedDataModeController:
@@ -1073,8 +1073,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1551
-    y: 79
+    x: 1552
+    y: 24
     width: 368
     height: 907
   m_SerializedDataModeController:
@@ -1124,8 +1124,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Hierarchy\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1287
-    y: 79
+    x: 1288
+    y: 24
     width: 262
     height: 907
   m_SerializedDataModeController:
@@ -1195,8 +1195,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 459
-    y: 79
+    x: 1
+    y: 24
     width: 826
     height: 644
   m_SerializedDataModeController:
@@ -1823,7 +1823,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 564
+    y: 509
     width: 458
     height: 422
   m_SerializedDataModeController:
