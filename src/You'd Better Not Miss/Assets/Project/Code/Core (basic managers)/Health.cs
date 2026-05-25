@@ -24,7 +24,7 @@ namespace Code
             }
         }
 
-        private bool IsDead
+        public bool IsDead
         {
             get
             {

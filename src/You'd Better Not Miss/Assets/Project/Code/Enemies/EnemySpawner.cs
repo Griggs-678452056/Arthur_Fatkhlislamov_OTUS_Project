@@ -56,7 +56,7 @@ namespace Code
 
             _alive--;
 
-            _enemyPool.Return(enemy.gameObject);
+            //_enemyPool.Return(enemy.gameObject);
 
             if (_spawned >= _totalEnemies && _alive <= 0)
             {

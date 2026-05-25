@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-
-namespace Code
+﻿namespace Code
 {
 	public interface IDamageable
 	{

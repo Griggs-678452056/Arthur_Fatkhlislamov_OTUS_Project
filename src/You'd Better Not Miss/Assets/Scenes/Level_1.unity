@@ -490,7 +490,7 @@ Transform:
   m_GameObject: {fileID: 245109472}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -551,8 +551,8 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: feaac6b6b3ad4f64894a51fc24db69b2, type: 3}
   _spawnPoint: {fileID: 7852417212325297806}
   _countForSpawn: 25
-  _spawnRangeX: 5
-  _spawnRangeZ: 5
+  _spawnRangeX: 12
+  _spawnRangeZ: 8.5
   _raycastHeight: 4
   _floorMask:
     serializedVersion: 2
@@ -908,7 +908,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 1, g: 0.99999994, b: 0.2688679, a: 1}
-  m_Intensity: 3
+  m_Intensity: 7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1067,7 +1067,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 1, g: 0.99999994, b: 0.2688679, a: 1}
-  m_Intensity: 3
+  m_Intensity: 7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1194,7 +1194,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 1, g: 0.99999994, b: 0.2688679, a: 1}
-  m_Intensity: 3
+  m_Intensity: 7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2060,7 +2060,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 1, g: 0.99999994, b: 0.2688679, a: 1}
-  m_Intensity: 3
+  m_Intensity: 7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2267,7 +2267,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 1, g: 0.99999994, b: 0.2688679, a: 1}
-  m_Intensity: 3
+  m_Intensity: 7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2533,7 +2533,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 1, g: 0.99999994, b: 0.2688679, a: 1}
-  m_Intensity: 3
+  m_Intensity: 7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2623,7 +2623,7 @@ Transform:
   m_GameObject: {fileID: 1343037281}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2685,7 +2685,7 @@ MonoBehaviour:
   _spawnPoint: {fileID: 7404354991989370250}
   _countForSpawn: 15
   _spawnRangeX: 5
-  _spawnRangeZ: 5
+  _spawnRangeZ: 7.5
   _raycastHeight: 4
   _floorMask:
     serializedVersion: 2
@@ -3368,7 +3368,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 1, g: 0.99999994, b: 0.2688679, a: 1}
-  m_Intensity: 3
+  m_Intensity: 7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4047,7 +4047,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 1, g: 0.99999994, b: 0.2688679, a: 1}
-  m_Intensity: 3
+  m_Intensity: 7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4174,7 +4174,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 1, g: 0.99999994, b: 0.2688679, a: 1}
-  m_Intensity: 3
+  m_Intensity: 7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
