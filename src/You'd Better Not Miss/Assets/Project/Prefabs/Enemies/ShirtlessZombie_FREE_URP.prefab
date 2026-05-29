@@ -2645,7 +2645,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 2159f4534e9bae540a14e27e0674daf0, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -2704,9 +2704,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 1.2
+  m_Height: 1.9
   m_Direction: 1
-  m_Center: {x: 0, y: 1.15, z: 0}
+  m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!195 &4216727504795940218
 NavMeshAgent:
   m_ObjectHideFlags: 0

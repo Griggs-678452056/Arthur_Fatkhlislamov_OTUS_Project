@@ -5,9 +5,9 @@ namespace Code
 {
     public class EnemyAI : MonoBehaviour
     {
-        [SerializeField] private float _attackDistance = 2f;
+        [SerializeField] private float _attackDistance = 1f;
         [SerializeField] private float _attackCooldown = 1f;
-        [SerializeField] private float _damage = 10f;
+        [SerializeField] private float _damage = 5f;
         [SerializeField] private float _detectionDistance = 5f;
 
         [SerializeField] private EnemyAnimator _animator;
@@ -18,17 +18,7 @@ namespace Code
 
         private float _lastAttackTime;
 
-        private void OnEnable()
-        {
-            if (_agent != null)
-            {
-                _agent.isStopped = false;
-                _agent.ResetPath();
-            }
-
-            _lastAttackTime = 0;
-        }
-
+        private bool _isDead;
         public void Init(Transform target)
         {
             if (target == null)
@@ -51,6 +41,11 @@ namespace Code
         private void Update()
         {
             if (_target == null)
+            {
+                return;
+            }
+
+            if (_isDead)
             {
                 return;
             }
@@ -110,17 +105,9 @@ namespace Code
             }
         }
 
-        public void ResetEnemy()
+        public void SetDead()
         {
-            _target = null;
-
-            if (_agent != null)
-            {
-                _agent.isStopped = true;
-                _agent.ResetPath();
-            }
-
-            _animator.SetSpeed(0);
+            _isDead = true;
         }
     }
 }

@@ -3,9 +3,9 @@ using System.Collections;
 
 namespace Code
 {
-    public class EnemySpawner : MonoBehaviour // убрать пул врагов, скрипт EnemyPool сохранить на всякий случай
+    public class EnemySpawner : MonoBehaviour
     {
-        [SerializeField] private EnemyPool _enemyPool;
+        [SerializeField] private GameObject _zombiePrefab;
         [SerializeField] private Transform[] _spawnPoints;
         [SerializeField] private int _totalEnemies = 10;
         [SerializeField] private float _spawnDelay = 1f;
@@ -40,13 +40,12 @@ namespace Code
         {
             var point = _spawnPoints[Random.Range(0, _spawnPoints.Length)];
 
-            var enemyGO = _enemyPool.Get(point.position, point.rotation);
+            var enemyGO = Instantiate(_zombiePrefab, point.position, Quaternion.identity);
 
             var ai = enemyGO.GetComponent<EnemyAI>();
             ai.Init(_player);
 
             var health = enemyGO.GetComponent<EnemyHealth>();
-            health.OnDeath -= OnEnemyDeath;
             health.OnDeath += OnEnemyDeath;
         }
 
@@ -56,12 +55,16 @@ namespace Code
 
             _alive--;
 
-            //_enemyPool.Return(enemy.gameObject);
-
             if (_spawned >= _totalEnemies && _alive <= 0)
             {
-                _winLoseController.WinGame();
+                StartCoroutine(WinRoutine());
             }
+        }
+
+        private IEnumerator WinRoutine()
+        {
+            yield return new WaitForSeconds(3.5f);
+            _winLoseController.WinGame();
         }
     }
 }
