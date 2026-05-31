@@ -9,6 +9,8 @@ namespace Code
         [SerializeField] private float _runSpeed = 6f;
         [SerializeField] private float _gravity = -9.81f;
 
+        [SerializeField] private PlayerAnimator _playerAnimator;
+
         private CharacterController _controller;
         private PlayerInputHandler _input;
 
@@ -35,6 +37,8 @@ namespace Code
             float speed = _input.SprintHeld ? _runSpeed : _walkSpeed;
 
             _controller.Move(move * speed * Time.deltaTime);
+
+            _playerAnimator.SetSpeed(input.magnitude);
         }
 
         private void ApplyGravity()

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 
 namespace Code
 {
@@ -6,6 +8,9 @@ namespace Code
     {
         [SerializeField] private WinLoseController _winLoseController;
         [SerializeField] private UIController _uiController;
+
+        [SerializeField] private PlayerAnimator _playerAnimator;
+        public Action<PlayerHealth> OnDeath;
 
         private void Start()
         {
@@ -21,8 +26,17 @@ namespace Code
 
         protected override void Die()
         {
+            _playerAnimator.PlayDeath();
+            OnDeath?.Invoke(this);
+
+            StartCoroutine(DestroyObject());
+        }
+
+        private IEnumerator DestroyObject()
+        {
+            yield return new WaitForSeconds(4f);
+            Destroy(gameObject);
             _winLoseController.LoseGame();
-            base.Die();
         }
     }
 }

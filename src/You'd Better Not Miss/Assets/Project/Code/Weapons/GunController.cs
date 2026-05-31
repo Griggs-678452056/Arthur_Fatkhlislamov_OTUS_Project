@@ -12,6 +12,8 @@ namespace Code
 
         [SerializeField] private UIController _uiController;
 
+        [SerializeField] private PlayerAnimator _playerAnimator;
+
         private IWeapon _weapon;
         private PlayerInputHandler _input;
         private WeaponRuntime _runtime = new WeaponRuntime();
@@ -70,11 +72,14 @@ namespace Code
             _nextFireTime = Time.time + _weaponConfig.FireRate;
 
             _runtime.ConsumeAmmo();
+
             _uiController.SetAmmo(
                 _runtime.CurrentAmmo,
                 _weaponConfig.MagazineSize);
 
             _weapon.Shoot(_runtime.Damage);
+
+            _playerAnimator.PlayAttack();
 
             Debug.Log($"Бум! Патронов: {_runtime.CurrentAmmo}");
         }
@@ -92,6 +97,11 @@ namespace Code
                 return;
             }
 
+            if (_runtime.CurrentAmmo == _weaponConfig.MagazineSize)
+            {
+                return;
+            }
+
             ReloadAsync().Forget();
         }
 
@@ -103,6 +113,8 @@ namespace Code
             }
 
             _isReloading = true;
+
+            _playerAnimator.PlayReload();
 
             _reloadCts?.Cancel();
             _reloadCts = new CancellationTokenSource();
@@ -120,6 +132,7 @@ namespace Code
                     );
 
                 _runtime.Reload();
+
                 _uiController.SetAmmo(
                 _runtime.CurrentAmmo,
                 _weaponConfig.MagazineSize);
@@ -134,16 +147,6 @@ namespace Code
             {
                 _isReloading = false;
             }
-        }
-
-        public void UpgradeDamage(float amount)
-        {
-            _runtime.UpgradeDamage(amount);
-        }
-
-        public void UpgradeMagazine(int amount)
-        {
-            _runtime.UpgradeMagazine(amount);
         }
 
         private void OnDestroy()

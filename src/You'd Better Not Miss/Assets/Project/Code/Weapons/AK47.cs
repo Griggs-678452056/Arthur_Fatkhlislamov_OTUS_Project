@@ -12,8 +12,6 @@ namespace Code
         [Header("Stats")]
         [SerializeField] private float _range = 100f;
 
-        private float _lastShootTime;
-
         public void Shoot(float damage)
         {
             Vector3 direction = GetSpreadDirection();
