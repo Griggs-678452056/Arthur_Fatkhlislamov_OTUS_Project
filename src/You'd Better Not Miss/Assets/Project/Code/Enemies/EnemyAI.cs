@@ -46,6 +46,12 @@ namespace Code
         {
             _agent = GetComponent<NavMeshAgent>();
             _animator = GetComponent<EnemyAnimator>();
+            PlayerHealth.OnPlayerDied += Disable;
+        }
+
+        private void Disable()
+        {
+            enabled = false;
         }
 
         private void Update()
@@ -117,7 +123,7 @@ namespace Code
 
             float distance = Vector3.Distance(transform.position, _target.position);
 
-            if (distance <= _attackDistance + 0.3f)
+            if (distance <= _attackDistance + 0.7f)
             {
                 _playerHealth?.TakeDamage(_damage);
             }
@@ -169,6 +175,11 @@ namespace Code
             AudioClip clip = _attackClips[Random.Range(0, _attackClips.Length)];
 
             _audioSource.PlayOneShot(clip);
+        }
+
+        private void OnDestroy()
+        {
+            PlayerHealth.OnPlayerDied -= Disable;
         }
     }
 }

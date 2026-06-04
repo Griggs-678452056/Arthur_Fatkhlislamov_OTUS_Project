@@ -6,11 +6,15 @@ namespace Code
 {
     public class PlayerHealth : Health
     {
+        public static event Action OnPlayerDied;
+
+        public Action<PlayerHealth> OnDeath;
+
         [SerializeField] private WinLoseController _winLoseController;
         [SerializeField] private UIController _uiController;
 
         [SerializeField] private PlayerAnimator _playerAnimator;
-        public Action<PlayerHealth> OnDeath;
+
 
         private void Start()
         {
@@ -28,6 +32,7 @@ namespace Code
         {
             _playerAnimator.PlayDeath();
             OnDeath?.Invoke(this);
+            OnPlayerDied?.Invoke();
 
             StartCoroutine(DestroyObject());
         }

@@ -7284,6 +7284,10 @@ PrefabInstance:
       propertyPath: m_AnimatePhysics
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3298088801470428830, guid: bf01fe95372b1ec4d89dd9836f25f3c4, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3298088801473243054, guid: bf01fe95372b1ec4d89dd9836f25f3c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -23,6 +23,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_5.unity
     guid: 032defcdda58aa84e80de1d03bb3d949
+  - enabled: 1
+    path: Assets/Scenes/Pause Menu.unity
+    guid: e086966ee4355a4468ec08b725e0bf1f
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 09cc5582a9259e84fbe0500ba4761039
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: 7a127275d059e9d46bb5ff542b86036f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: ffff77ce43e7c1049b3e01a91f6726ed, type: 3}
   m_UseUCBPForAssetBundles: 0
