@@ -6,6 +6,7 @@ namespace Code
     public class PauseMenu : MonoBehaviour
     {
         [SerializeField] private Button _continueButton;
+        [SerializeField] private Button _restartButton;
         [SerializeField] private Button _saveGameButton;
         [SerializeField] private Button _loadGameButton;
         [SerializeField] private Button _goToMainMenuButton;
@@ -23,6 +24,7 @@ namespace Code
             }
 
             _continueButton.onClick.AddListener(ContinueClicked);
+            _restartButton.onClick.AddListener(RestartLevelClicked);
             _saveGameButton.onClick.AddListener(SaveGameClicked);
             _loadGameButton.onClick.AddListener(LoadGameClicked);
             _goToMainMenuButton.onClick.AddListener(GoToMainMenuButtonClicked);
@@ -31,6 +33,11 @@ namespace Code
         private void ContinueClicked()
         {
             _pauseMenuController.ContinueGame();
+        }
+
+        private void RestartLevelClicked()
+        {
+            _pauseMenuController.RestartLevel();
         }
 
         private void SaveGameClicked()
@@ -51,6 +58,7 @@ namespace Code
         private void OnDestroy()
         {
             _continueButton.onClick.RemoveAllListeners();
+            _restartButton.onClick.RemoveAllListeners();
             _saveGameButton.onClick.RemoveAllListeners();
             _loadGameButton.onClick.RemoveAllListeners();
             _goToMainMenuButton.onClick.RemoveAllListeners();

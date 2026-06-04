@@ -28,7 +28,7 @@ namespace Code
         public void Restart()
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene("Run");
+            SceneManager.LoadScene("Level_1");
         }
 
         public void MainMenu()

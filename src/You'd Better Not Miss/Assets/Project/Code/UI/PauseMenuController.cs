@@ -96,6 +96,11 @@ namespace Code
             _isPaused = true;
         }
 
+        public void RestartLevel()
+        {
+            Debug.Log("Уровень перезапущен");
+        }
+
         public void SaveGame()
         {
             Debug.Log("Игра сохранена");
