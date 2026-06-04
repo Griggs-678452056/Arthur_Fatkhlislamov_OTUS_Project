@@ -12,8 +12,17 @@ namespace Code
         [Header("Stats")]
         [SerializeField] private float _range = 100f;
 
+        [Header("Audio")]
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioClip _shootSound;
+
         public void Shoot(float damage)
         {
+            if (_shootSound != null)
+            {
+                _audioSource.PlayOneShot(_shootSound);
+            }
+
             Vector3 direction = GetSpreadDirection();
 
             Ray ray = new Ray(_camera.transform.position, direction);

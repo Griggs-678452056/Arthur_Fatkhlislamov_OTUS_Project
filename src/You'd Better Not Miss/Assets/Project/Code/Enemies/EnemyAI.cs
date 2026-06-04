@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 namespace Code
 {
@@ -11,6 +13,14 @@ namespace Code
         [SerializeField] private float _detectionDistance = 5f;
 
         [SerializeField] private EnemyAnimator _animator;
+
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioClip[] _idleClips;
+        [SerializeField] private AudioClip[] _attackClips;
+
+        private float _idleSoundIntervalMin = 3f;
+        private float _idleSoundIntervalMax = 8f;
+        private float _nextIdleSoundTime;
 
         private NavMeshAgent _agent;
         private Transform _target;
@@ -76,7 +86,11 @@ namespace Code
 
                 _animator.SetSpeed(0);
             }
+
+            PlayIdleSound();
         }
+
+
 
         private void TryAttack()
         {
@@ -87,8 +101,12 @@ namespace Code
 
             _lastAttackTime = Time.time;
 
+            PlayAttackSound();
+
             _animator.PlayAttack();
         }
+
+
 
         public void DealDamage()
         {
@@ -108,6 +126,49 @@ namespace Code
         public void SetDead()
         {
             _isDead = true;
+        }
+
+        private void PlayIdleSound()
+        {
+            if (_target == null)
+            {
+                return;
+            }
+
+            float distance = Vector3.Distance(transform.position, _target.position);
+
+            if (distance > _detectionDistance)
+            {
+                return;
+            }
+
+            if (_idleClips == null || _idleClips.Length == 0)
+            {
+                return;
+            }
+
+            if (Time.time < _nextIdleSoundTime)
+            {
+                return;
+            }
+
+            AudioClip clip = _idleClips[Random.Range(0, _idleClips.Length)];
+
+            _audioSource.PlayOneShot(clip);
+
+            _nextIdleSoundTime = Time.time + Random.Range(_idleSoundIntervalMin, _idleSoundIntervalMax);
+        }
+
+        private void PlayAttackSound()
+        {
+            if (_attackClips == null || _attackClips.Length == 0)
+            {
+                return;
+            }
+
+            AudioClip clip = _attackClips[Random.Range(0, _attackClips.Length)];
+
+            _audioSource.PlayOneShot(clip);
         }
     }
 }

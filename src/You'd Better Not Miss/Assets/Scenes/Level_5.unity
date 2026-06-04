@@ -251,6 +251,9 @@ MonoBehaviour:
   _weaponBehaviour: {fileID: 410275213}
   _uiController: {fileID: 516048883}
   _playerAnimator: {fileID: 5564005897653282711}
+  _audioSource: {fileID: 1986950583}
+  _reloadSound: {fileID: 8300000, guid: d85099fefd84d429788e09001413207b, type: 3}
+  _emptyMagazineSound: {fileID: 8300000, guid: e15566974e36dc94687008f37aff1966, type: 3}
 --- !u!114 &93411475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4383,6 +4386,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1835001211714528853, guid: d6b56504304c325419b598fe3ddb95ed, type: 3}
   m_PrefabInstance: {fileID: 1700251591117291665}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1986950583 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1520603832715352224, guid: d098fcaa6b2535945a222c9ec0d3b89e, type: 3}
+  m_PrefabInstance: {fileID: 7868669155267620065}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2032276956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5040,6 +5048,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6156965435134631662}
     m_Modifications:
+    - target: {fileID: 708404821, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 708404821, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
+      propertyPath: m_Size.z
+      value: 2.6124914
+      objectReference: {fileID: 0}
+    - target: {fileID: 708404822, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
+      propertyPath: m_Size.z
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3754249201118989098, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.5
@@ -5256,6 +5276,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6156965435134631662}
     m_Modifications:
+    - target: {fileID: 708404821, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 708404821, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
+      propertyPath: m_Size.z
+      value: 2.6124914
+      objectReference: {fileID: 0}
+    - target: {fileID: 708404822, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
+      propertyPath: m_Size.z
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3754249201118989098, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.5
@@ -5326,6 +5358,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6156965435134631662}
     m_Modifications:
+    - target: {fileID: 201041907, guid: 312c2475757f3d449bc5791d854de9f8, type: 3}
+      propertyPath: m_Size.z
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1575485029253254693, guid: 312c2475757f3d449bc5791d854de9f8, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Base_Wall_Window_01
@@ -5685,6 +5721,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6156965435134631662}
     m_Modifications:
+    - target: {fileID: 185940219, guid: d6b56504304c325419b598fe3ddb95ed, type: 3}
+      propertyPath: m_Size.z
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1314183909916261615, guid: d6b56504304c325419b598fe3ddb95ed, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Base_Wall_01
@@ -6113,6 +6153,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6156965435134631662}
     m_Modifications:
+    - target: {fileID: 201041907, guid: 312c2475757f3d449bc5791d854de9f8, type: 3}
+      propertyPath: m_Size.z
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1575485029253254693, guid: 312c2475757f3d449bc5791d854de9f8, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Base_Wall_Window_01
@@ -6387,6 +6431,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6156965435134631662}
     m_Modifications:
+    - target: {fileID: 708404821, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 708404821, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
+      propertyPath: m_Size.z
+      value: 2.6124914
+      objectReference: {fileID: 0}
+    - target: {fileID: 708404822, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
+      propertyPath: m_Size.z
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3754249201118989098, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.5
@@ -6457,6 +6513,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6156965435134631662}
     m_Modifications:
+    - target: {fileID: 201041907, guid: 312c2475757f3d449bc5791d854de9f8, type: 3}
+      propertyPath: m_Size.z
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1575485029253254693, guid: 312c2475757f3d449bc5791d854de9f8, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Base_Wall_Window_01
@@ -7791,6 +7851,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6156965435134631662}
     m_Modifications:
+    - target: {fileID: 201041907, guid: 312c2475757f3d449bc5791d854de9f8, type: 3}
+      propertyPath: m_Size.z
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1575485029253254693, guid: 312c2475757f3d449bc5791d854de9f8, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Base_Wall_Window_01
@@ -8107,6 +8171,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6156965435134631662}
     m_Modifications:
+    - target: {fileID: 708404821, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 708404821, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
+      propertyPath: m_Size.z
+      value: 2.6124914
+      objectReference: {fileID: 0}
+    - target: {fileID: 708404822, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
+      propertyPath: m_Size.y
+      value: 3.005743
+      objectReference: {fileID: 0}
+    - target: {fileID: 708404822, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
+      propertyPath: m_Size.z
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3754249201118989098, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.5
@@ -8608,6 +8688,14 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 330585545}
+    - target: {fileID: 4925328585860216462, guid: d098fcaa6b2535945a222c9ec0d3b89e, type: 3}
+      propertyPath: _shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3061c7b9b32d894478e4126ccce25ca3, type: 3}
+    - target: {fileID: 4925328585860216462, guid: d098fcaa6b2535945a222c9ec0d3b89e, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1986950583}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8647,6 +8735,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6156965435134631662}
     m_Modifications:
+    - target: {fileID: 185940219, guid: d6b56504304c325419b598fe3ddb95ed, type: 3}
+      propertyPath: m_Size.z
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1314183909916261615, guid: d6b56504304c325419b598fe3ddb95ed, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Base_Wall_01

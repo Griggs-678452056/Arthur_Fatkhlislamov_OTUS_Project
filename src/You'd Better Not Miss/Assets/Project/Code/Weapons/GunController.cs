@@ -14,12 +14,17 @@ namespace Code
 
         [SerializeField] private PlayerAnimator _playerAnimator;
 
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioClip _reloadSound;
+        [SerializeField] private AudioClip _emptyMagazineSound;
+
         private IWeapon _weapon;
         private PlayerInputHandler _input;
         private WeaponRuntime _runtime = new WeaponRuntime();
 
         private float _nextFireTime;
         private bool _isReloading;
+        private float _nextEmptySoundTime;
 
         private CancellationTokenSource _reloadCts;
 
@@ -65,6 +70,12 @@ namespace Code
 
             if (!_runtime.CanShoot())
             {
+                if (Time.time >= _nextEmptySoundTime)
+                {
+                    _audioSource.PlayOneShot(_emptyMagazineSound);
+                    _nextEmptySoundTime = Time.time + 0.3f;
+                }
+
                 Debug.Log("Кончились патроны!");
                 return;
             }
@@ -115,6 +126,8 @@ namespace Code
             _isReloading = true;
 
             _playerAnimator.PlayReload();
+
+            _audioSource.PlayOneShot(_reloadSound);
 
             _reloadCts?.Cancel();
             _reloadCts = new CancellationTokenSource();
