@@ -949,3 +949,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Code.WinScreen
   _canvasGroup: {fileID: 5357008885993261549}
   _panel: {fileID: 1342448130745317753}
+  _levels: 0100000002000000030000000400000005000000

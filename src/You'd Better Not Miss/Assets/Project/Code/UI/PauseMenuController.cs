@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,8 +6,10 @@ namespace Code
     public class PauseMenuController : MonoBehaviour
     {
         [Header("Scenes")]
-        [SerializeField] private string _pauseSceneName = "Pause Menu";
         [SerializeField] private string _mainMenuSceneName = "Main Menu";
+        [SerializeField] private GameObject _pauseMenuPrefab;
+
+        private GameObject _pauseMenuInstance;
 
         private PlayerInputHandler _input;
 
@@ -71,7 +72,7 @@ namespace Code
 
             Time.timeScale = 1f;
 
-            SceneManager.UnloadSceneAsync(_pauseSceneName);
+            _pauseMenuInstance.SetActive(false);
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -86,9 +87,14 @@ namespace Code
                 return;
             }
 
+            if (_pauseMenuInstance == null)
+            {
+                _pauseMenuInstance = Instantiate(_pauseMenuPrefab);
+            }
+
             Time.timeScale = 0f;
 
-            SceneManager.LoadScene(_pauseSceneName, LoadSceneMode.Additive);
+            _pauseMenuInstance.SetActive(true);
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -98,7 +104,14 @@ namespace Code
 
         public void RestartLevel()
         {
-            Debug.Log("Уровень перезапущен");
+            Time.timeScale = 1f;
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
+            _isPaused = false;
         }
 
         public void SaveGame()

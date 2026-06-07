@@ -7,8 +7,11 @@ namespace Code
     {
         [SerializeField] private GameObject _zombiePrefab;
         [SerializeField] private Transform[] _spawnPoints;
-        [SerializeField] private int _totalEnemies = 10;
         [SerializeField] private float _spawnDelay = 1f;
+
+        [SerializeField] private int _minEnemies = 5;
+        [SerializeField] private int _maxEnemies = 30;
+        private int _totalEnemies;
 
         private int _spawned;
         private int _alive;
@@ -16,10 +19,18 @@ namespace Code
         private Transform _player;
         private WinLoseController _winLoseController;
 
+        private void Awake()
+        {
+            _minEnemies = Mathf.Max(_minEnemies, _maxEnemies - 10);
+            _maxEnemies = Mathf.Max(_minEnemies + 5, _maxEnemies);
+        }
+
         public void Init(Transform player, WinLoseController winLoseController)
         {
             _player = player;
             _winLoseController = winLoseController;
+
+            _totalEnemies = Random.Range(_minEnemies, _maxEnemies);
 
             StartCoroutine(SpawnRoutine());
         }

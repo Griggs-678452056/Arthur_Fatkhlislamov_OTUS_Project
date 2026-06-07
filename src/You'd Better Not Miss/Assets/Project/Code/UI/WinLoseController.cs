@@ -1,12 +1,14 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Code
 {
     public class WinLoseController : MonoBehaviour
     {
-        [SerializeField] private string _winSceneName = "Win";
-        [SerializeField] private string _loseSceneName = "Lose";
+        [SerializeField] private GameObject _winPrefab;
+        [SerializeField] private GameObject _losePrefab;
+
+        private GameObject _winInstance;
+        private GameObject _loseInstance;
 
         private bool _isEnded;
 
@@ -17,10 +19,15 @@ namespace Code
                 return;
             }
 
+            if (_winInstance == null)
+            {
+                _winInstance = Instantiate(_winPrefab);
+            }
+
             _isEnded = true;
             EndGame();
 
-            SceneManager.LoadScene(_winSceneName, LoadSceneMode.Additive);
+            _winInstance.SetActive(true);
         }
 
         public void LoseGame()
@@ -30,10 +37,15 @@ namespace Code
                 return;
             }
 
+            if (_loseInstance == null)
+            {
+                _loseInstance = Instantiate(_losePrefab);
+            }
+
             _isEnded = true;
             EndGame();
 
-            SceneManager.LoadScene(_loseSceneName, LoadSceneMode.Additive);
+            _loseInstance.SetActive(true);
         }
 
         private void EndGame()

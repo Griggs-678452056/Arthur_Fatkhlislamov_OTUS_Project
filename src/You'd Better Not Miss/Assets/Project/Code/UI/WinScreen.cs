@@ -1,13 +1,14 @@
 ﻿using DG.Tweening;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Code
 {
-	public class WinScreen: MonoBehaviour
-	{
-		[SerializeField] private CanvasGroup _canvasGroup;
-		[SerializeField] private RectTransform _panel;
+    public class WinScreen : MonoBehaviour
+    {
+        [SerializeField] private CanvasGroup _canvasGroup;
+        [SerializeField] private RectTransform _panel;
 
         private void Start()
         {
@@ -28,7 +29,22 @@ namespace Code
         public void NextLevel()
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene("Level_1");
+
+            int currentScene = SceneManager.GetActiveScene().buildIndex;
+
+            List<int> availableLevels = new List<int>();
+
+            for (int level = 1; level < SceneManager.sceneCountInBuildSettings; level++)
+            {
+                if (level != currentScene)
+                {
+                    availableLevels.Add(level);
+                }
+            }
+
+            int randomLevel = availableLevels[Random.Range(0, availableLevels.Count)];
+
+            SceneManager.LoadScene(randomLevel);
         }
 
         public void MainMenu()

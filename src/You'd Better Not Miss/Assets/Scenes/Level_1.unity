@@ -213,8 +213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b12bc06a2fa5c344ab6d491cda5cf30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Code.PauseMenuController
-  _pauseSceneName: Pause Menu
   _mainMenuSceneName: Main Menu
+  _pauseMenuPrefab: {fileID: 7327320352246926713, guid: 0049352d161889848b07ed4fcc16d4ae, type: 3}
 --- !u!4 &35883069
 Transform:
   m_ObjectHideFlags: 0
@@ -1715,8 +1715,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c971d50f72f714495474580c26d686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  _winSceneName: Win
-  _loseSceneName: Lose
+  _winPrefab: {fileID: 6294101332720638137, guid: 069d53af4201e604385106bdae554f22, type: 3}
+  _losePrefab: {fileID: 8058247403170364840, guid: e97fd090d3a30f0468abb599ad811a6f, type: 3}
 --- !u!4 &612201075 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3754249201118989098, guid: 96e174d3abafc7d45a7f09e237bc69e6, type: 3}
@@ -4539,7 +4539,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -4672,8 +4672,9 @@ MonoBehaviour:
   - {fileID: 1620636531}
   - {fileID: 7404354991989370250}
   - {fileID: 7852417212325297806}
-  _totalEnemies: 7
   _spawnDelay: 1
+  _minEnemies: 5
+  _maxEnemies: 30
 --- !u!4 &2127714440
 Transform:
   m_ObjectHideFlags: 0
