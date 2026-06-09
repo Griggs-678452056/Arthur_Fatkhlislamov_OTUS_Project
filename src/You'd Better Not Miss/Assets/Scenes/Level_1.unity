@@ -666,7 +666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdbdd17a3a5fe144cb805eb930ec11d8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -821,7 +821,7 @@ GameObject:
   - component: {fileID: 334415945}
   - component: {fileID: 334415947}
   - component: {fileID: 334415946}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Point Light_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -980,7 +980,7 @@ GameObject:
   - component: {fileID: 348196240}
   - component: {fileID: 348196242}
   - component: {fileID: 348196241}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Point Light_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1107,7 +1107,7 @@ GameObject:
   - component: {fileID: 401575338}
   - component: {fileID: 401575340}
   - component: {fileID: 401575339}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Point Light_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1810,7 +1810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 696471920}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: CeilingLamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1973,7 +1973,7 @@ GameObject:
   - component: {fileID: 879724637}
   - component: {fileID: 879724639}
   - component: {fileID: 879724638}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Point Light_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2180,7 +2180,7 @@ GameObject:
   - component: {fileID: 1103474164}
   - component: {fileID: 1103474166}
   - component: {fileID: 1103474165}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Point Light_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2371,7 +2371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 057c9c1ca39f38d4faad0001eab7ee1a, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 057c9c1ca39f38d4faad0001eab7ee1a, type: 3}
       propertyPath: m_IsActive
@@ -2446,7 +2446,7 @@ GameObject:
   - component: {fileID: 1279949863}
   - component: {fileID: 1279949865}
   - component: {fileID: 1279949864}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2792,7 +2792,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1493335592}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: CeilingLamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3204,7 +3204,7 @@ GameObject:
   - component: {fileID: 1545884480}
   - component: {fileID: 1545884482}
   - component: {fileID: 1545884481}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Point Light_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3513,7 +3513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 057c9c1ca39f38d4faad0001eab7ee1a, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 057c9c1ca39f38d4faad0001eab7ee1a, type: 3}
       propertyPath: m_IsActive
@@ -3696,7 +3696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdbdd17a3a5fe144cb805eb930ec11d8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3749,7 +3749,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 63
+    m_Bits: 191
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_GenerateLinks: 0
@@ -3857,7 +3857,7 @@ GameObject:
   - component: {fileID: 1811324238}
   - component: {fileID: 1811324240}
   - component: {fileID: 1811324239}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3984,7 +3984,7 @@ GameObject:
   - component: {fileID: 1840110754}
   - component: {fileID: 1840110756}
   - component: {fileID: 1840110755}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Point Light_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4119,7 +4119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1897667055}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: CeilingLamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4704,7 +4704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2141735036}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: CeilingLamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4806,7 +4806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 057c9c1ca39f38d4faad0001eab7ee1a, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 057c9c1ca39f38d4faad0001eab7ee1a, type: 3}
       propertyPath: m_IsActive
@@ -5013,7 +5013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdbdd17a3a5fe144cb805eb930ec11d8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5177,7 +5177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdbdd17a3a5fe144cb805eb930ec11d8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5686,7 +5686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdbdd17a3a5fe144cb805eb930ec11d8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5858,7 +5858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdbdd17a3a5fe144cb805eb930ec11d8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5919,7 +5919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdbdd17a3a5fe144cb805eb930ec11d8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6278,7 +6278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdbdd17a3a5fe144cb805eb930ec11d8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7107,7 +7107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 057c9c1ca39f38d4faad0001eab7ee1a, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 057c9c1ca39f38d4faad0001eab7ee1a, type: 3}
       propertyPath: m_IsActive
@@ -7820,7 +7820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 057c9c1ca39f38d4faad0001eab7ee1a, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 057c9c1ca39f38d4faad0001eab7ee1a, type: 3}
       propertyPath: m_IsActive
@@ -8324,7 +8324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 057c9c1ca39f38d4faad0001eab7ee1a, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 057c9c1ca39f38d4faad0001eab7ee1a, type: 3}
       propertyPath: m_IsActive
@@ -8561,7 +8561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bdbdd17a3a5fe144cb805eb930ec11d8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
