@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -8,7 +7,7 @@ namespace Code
     public class EnemyAI : MonoBehaviour
     {
         [SerializeField] private float _attackDistance = 1f;
-        [SerializeField] private float _attackCooldown = 1f;
+        [SerializeField] private float _attackCooldown = 2.5f;
         [SerializeField] private float _damage = 5f;
         [SerializeField] private float _detectionDistance = 5f;
 
@@ -72,6 +71,18 @@ namespace Code
             {
                 _agent.isStopped = true;
 
+                Vector3 lookDirection = _target.position - transform.position;
+                lookDirection.y = 0f;
+
+                if (lookDirection.sqrMagnitude > 0.01f)
+                {
+                    Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
+                    transform.rotation = Quaternion.Slerp(
+                        transform.rotation,
+                        targetRotation,
+                        8f * Time.deltaTime);
+                }
+
                 _animator.SetSpeed(0);
 
                 TryAttack();
@@ -112,8 +123,6 @@ namespace Code
             _animator.PlayAttack();
         }
 
-
-
         public void DealDamage()
         {
             if (_target == null)
@@ -123,10 +132,23 @@ namespace Code
 
             float distance = Vector3.Distance(transform.position, _target.position);
 
-            if (distance <= _attackDistance + 0.7f)
+            if (distance > _attackDistance + 0.7f)
             {
-                _playerHealth?.TakeDamage(_damage);
+                return;
             }
+
+            Vector3 directionToPlayer = (_target.position - transform.position).normalized;
+
+            float angle = Vector3.Angle(
+                transform.forward,
+                directionToPlayer);
+
+            if (angle > 70)
+            {
+                return;
+            }
+
+            _playerHealth?.TakeDamage(_damage);
         }
 
         public void SetDead()

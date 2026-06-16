@@ -5,15 +5,13 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private Button _startGameButton;
-    [SerializeField] private Button _loadGameButton;
-    [SerializeField] private Button _settingsButton;
+    [SerializeField] private Button _howToPlayButton;
     [SerializeField] private Button _exitGameButton;
 
     private void OnEnable()
     {
         _startGameButton.onClick.AddListener(StartClicked);
-        _loadGameButton.onClick.AddListener(LoadingClicked);
-        _settingsButton.onClick.AddListener(SettingsClicked);
+        _howToPlayButton.onClick.AddListener(InfoClicked);
         _exitGameButton.onClick.AddListener(ExitClicked);
     }
 
@@ -26,15 +24,10 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-
-    private void LoadingClicked()
+        
+    private void InfoClicked()
     {
-        Debug.Log("Отсюда можно загрузить последнее сохранение");
-    }
-
-    private void SettingsClicked()
-    {
-        Debug.Log("Настройки игры");
+        Debug.Log("Информация об управлении в игре");
     }
 
     private void ExitClicked()
@@ -46,8 +39,7 @@ public class MainMenu : MonoBehaviour
     private void OnDisable()
     {
         _startGameButton.onClick.RemoveAllListeners();
-        _loadGameButton.onClick.RemoveAllListeners();
-        _settingsButton.onClick.RemoveAllListeners();
+        _howToPlayButton.onClick.RemoveAllListeners();
         _exitGameButton.onClick.RemoveAllListeners();
     }
 }

@@ -7,8 +7,6 @@ namespace Code
     {
         [SerializeField] private Button _continueButton;
         [SerializeField] private Button _restartButton;
-        [SerializeField] private Button _saveGameButton;
-        [SerializeField] private Button _loadGameButton;
         [SerializeField] private Button _goToMainMenuButton;
 
         private PauseMenuController _pauseMenuController;
@@ -25,8 +23,6 @@ namespace Code
 
             _continueButton.onClick.AddListener(ContinueClicked);
             _restartButton.onClick.AddListener(RestartLevelClicked);
-            _saveGameButton.onClick.AddListener(SaveGameClicked);
-            _loadGameButton.onClick.AddListener(LoadGameClicked);
             _goToMainMenuButton.onClick.AddListener(GoToMainMenuButtonClicked);
         }
 
@@ -40,16 +36,6 @@ namespace Code
             _pauseMenuController.RestartLevel();
         }
 
-        private void SaveGameClicked()
-        {
-            _pauseMenuController.SaveGame();
-        }
-
-        private void LoadGameClicked()
-        {
-            _pauseMenuController.LoadGame();
-        }
-
         private void GoToMainMenuButtonClicked()
         {
             _pauseMenuController.GoToMainMenu();
@@ -59,8 +45,6 @@ namespace Code
         {
             _continueButton.onClick.RemoveAllListeners();
             _restartButton.onClick.RemoveAllListeners();
-            _saveGameButton.onClick.RemoveAllListeners();
-            _loadGameButton.onClick.RemoveAllListeners();
             _goToMainMenuButton.onClick.RemoveAllListeners();
         }
     }

@@ -734,7 +734,7 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: 2ff1152d92c2c2d48bf96277974e1947, type: 3}
   - {fileID: 919132149155446097, guid: feaac6b6b3ad4f64894a51fc24db69b2, type: 3}
   _spawnPoint: {fileID: 7852417212325297806}
-  _countForSpawn: 25
+  _countForSpawn: 15
   _spawnRangeX: 12
   _spawnRangeZ: 8.5
   _raycastHeight: 4
@@ -4496,7 +4496,7 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: 2ff1152d92c2c2d48bf96277974e1947, type: 3}
   - {fileID: 919132149155446097, guid: feaac6b6b3ad4f64894a51fc24db69b2, type: 3}
   _spawnPoint: {fileID: 7404354991989370250}
-  _countForSpawn: 15
+  _countForSpawn: 7
   _spawnRangeX: 5
   _spawnRangeZ: 7.5
   _raycastHeight: 4
@@ -5082,7 +5082,7 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: 2ff1152d92c2c2d48bf96277974e1947, type: 3}
   - {fileID: 919132149155446097, guid: feaac6b6b3ad4f64894a51fc24db69b2, type: 3}
   _spawnPoint: {fileID: 1620636531}
-  _countForSpawn: 15
+  _countForSpawn: 5
   _spawnRangeX: 5
   _spawnRangeZ: 5
   _raycastHeight: 4
@@ -5454,7 +5454,7 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: 2ff1152d92c2c2d48bf96277974e1947, type: 3}
   - {fileID: 919132149155446097, guid: feaac6b6b3ad4f64894a51fc24db69b2, type: 3}
   _spawnPoint: {fileID: 670412319}
-  _countForSpawn: 15
+  _countForSpawn: 5
   _spawnRangeX: 5
   _spawnRangeZ: 5
   _raycastHeight: 4
@@ -6966,7 +6966,7 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: 2ff1152d92c2c2d48bf96277974e1947, type: 3}
   - {fileID: 919132149155446097, guid: feaac6b6b3ad4f64894a51fc24db69b2, type: 3}
   _spawnPoint: {fileID: 911093299}
-  _countForSpawn: 15
+  _countForSpawn: 7
   _spawnRangeX: 5
   _spawnRangeZ: 7.5
   _raycastHeight: 4
@@ -7954,7 +7954,7 @@ MonoBehaviour:
   - {fileID: 911093299}
   - {fileID: 7852417212325297806}
   _spawnDelay: 1
-  _minEnemies: 5
+  _minEnemies: 10
   _maxEnemies: 30
 --- !u!4 &2127714440
 Transform:
@@ -10706,7 +10706,7 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: 2ff1152d92c2c2d48bf96277974e1947, type: 3}
   - {fileID: 919132149155446097, guid: feaac6b6b3ad4f64894a51fc24db69b2, type: 3}
   _spawnPoint: {fileID: 6156965435134631662}
-  _countForSpawn: 15
+  _countForSpawn: 5
   _spawnRangeX: 5
   _spawnRangeZ: 5
   _raycastHeight: 4

@@ -16,6 +16,9 @@ namespace Code
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private AudioClip _shootSound;
 
+        [Header("Effects")]
+        [SerializeField] private BloodEffectSpawner _bloodEffectSpawner;
+
         public void Shoot(float damage)
         {
             if (_shootSound != null)
@@ -32,6 +35,10 @@ namespace Code
                 if (hit.collider.TryGetComponent<IDamageable>(out var dmg))
                 {
                     dmg.TakeDamage(damage);
+
+                    _bloodEffectSpawner?.SpawnBlood(
+                        hit.point,
+                        hit.normal);
                 }
 
                 SpawnTracer(hit.point);

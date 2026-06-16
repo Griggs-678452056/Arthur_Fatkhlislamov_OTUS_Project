@@ -525,7 +525,7 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: 2ff1152d92c2c2d48bf96277974e1947, type: 3}
   - {fileID: 919132149155446097, guid: feaac6b6b3ad4f64894a51fc24db69b2, type: 3}
   _spawnPoint: {fileID: 7852417212325297806}
-  _countForSpawn: 25
+  _countForSpawn: 15
   _spawnRangeX: 12
   _spawnRangeZ: 8.5
   _raycastHeight: 4
@@ -1355,7 +1355,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4925328585860216462, guid: d098fcaa6b2535945a222c9ec0d3b89e, type: 3}
   m_PrefabInstance: {fileID: 7868669155267620065}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1965067176}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95ce6e21018214e4f8ee6ab0b9c84fbf, type: 3}
@@ -2658,7 +2658,7 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: 2ff1152d92c2c2d48bf96277974e1947, type: 3}
   - {fileID: 919132149155446097, guid: feaac6b6b3ad4f64894a51fc24db69b2, type: 3}
   _spawnPoint: {fileID: 7404354991989370250}
-  _countForSpawn: 15
+  _countForSpawn: 7
   _spawnRangeX: 5
   _spawnRangeZ: 7.5
   _raycastHeight: 4
@@ -3104,7 +3104,7 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: 2ff1152d92c2c2d48bf96277974e1947, type: 3}
   - {fileID: 919132149155446097, guid: feaac6b6b3ad4f64894a51fc24db69b2, type: 3}
   _spawnPoint: {fileID: 1620636531}
-  _countForSpawn: 15
+  _countForSpawn: 5
   _spawnRangeX: 5
   _spawnRangeZ: 5
   _raycastHeight: 4
@@ -4371,6 +4371,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1835001211714528853, guid: d6b56504304c325419b598fe3ddb95ed, type: 3}
   m_PrefabInstance: {fileID: 4617804429125866972}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1965067176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4815568298902820581, guid: d098fcaa6b2535945a222c9ec0d3b89e, type: 3}
+  m_PrefabInstance: {fileID: 7868669155267620065}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1971098064 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2204212838617470111, guid: 312c2475757f3d449bc5791d854de9f8, type: 3}
@@ -4391,6 +4396,19 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 1520603832715352224, guid: d098fcaa6b2535945a222c9ec0d3b89e, type: 3}
   m_PrefabInstance: {fileID: 7868669155267620065}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1986950584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965067176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9ba96fd968e717429f3fde564fa9d77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Code.BloodEffectSpawner
+  _bloodEffectPrefab: {fileID: 1000013355911406, guid: febb1c0a7756cc6458bf066890540537, type: 3}
 --- !u!1001 &2032276956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4673,8 +4691,8 @@ MonoBehaviour:
   - {fileID: 7404354991989370250}
   - {fileID: 7852417212325297806}
   _spawnDelay: 1
-  _minEnemies: 5
-  _maxEnemies: 30
+  _minEnemies: 3
+  _maxEnemies: 15
 --- !u!4 &2127714440
 Transform:
   m_ObjectHideFlags: 0
@@ -7746,7 +7764,7 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: 2ff1152d92c2c2d48bf96277974e1947, type: 3}
   - {fileID: 919132149155446097, guid: feaac6b6b3ad4f64894a51fc24db69b2, type: 3}
   _spawnPoint: {fileID: 6156965435134631662}
-  _countForSpawn: 15
+  _countForSpawn: 5
   _spawnRangeX: 5
   _spawnRangeZ: 5
   _raycastHeight: 4
@@ -8705,10 +8723,17 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 1986950583}
+    - target: {fileID: 4925328585860216462, guid: d098fcaa6b2535945a222c9ec0d3b89e, type: 3}
+      propertyPath: _bloodEffectSpawner
+      value: 
+      objectReference: {fileID: 1986950584}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4815568298902820581, guid: d098fcaa6b2535945a222c9ec0d3b89e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1986950584}
   m_SourcePrefab: {fileID: 100100000, guid: d098fcaa6b2535945a222c9ec0d3b89e, type: 3}
 --- !u!65 &7907443595882202369
 BoxCollider:

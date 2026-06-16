@@ -9,8 +9,8 @@ namespace Code
         [SerializeField] private Transform[] _spawnPoints;
         [SerializeField] private float _spawnDelay = 1f;
 
-        [SerializeField] private int _minEnemies = 5;
-        [SerializeField] private int _maxEnemies = 30;
+        [SerializeField] private int _minEnemies = 3;
+        [SerializeField] private int _maxEnemies = 20;
         private int _totalEnemies;
 
         private int _spawned;
@@ -22,7 +22,7 @@ namespace Code
         private void Awake()
         {
             _minEnemies = Mathf.Max(_minEnemies, _maxEnemies - 10);
-            _maxEnemies = Mathf.Max(_minEnemies + 5, _maxEnemies);
+            _maxEnemies = Mathf.Max(_minEnemies + 1, _maxEnemies);
         }
 
         public void Init(Transform player, WinLoseController winLoseController)
