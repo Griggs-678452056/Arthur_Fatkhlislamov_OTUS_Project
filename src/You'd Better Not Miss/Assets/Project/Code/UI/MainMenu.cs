@@ -8,6 +8,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button _howToPlayButton;
     [SerializeField] private Button _exitGameButton;
 
+    [SerializeField] private GameObject _gameInfoPrefab;
+    [SerializeField] private Transform _uiParent;
+
+    private GameObject _infoInstance;
+
     private void OnEnable()
     {
         _startGameButton.onClick.AddListener(StartClicked);
@@ -24,10 +29,15 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-        
+
     private void InfoClicked()
     {
-        Debug.Log("Информация об управлении в игре");
+        if (_infoInstance == null)
+        {
+            _infoInstance = Instantiate(_gameInfoPrefab, _uiParent);
+        }
+
+        _infoInstance.SetActive(true);
     }
 
     private void ExitClicked()
