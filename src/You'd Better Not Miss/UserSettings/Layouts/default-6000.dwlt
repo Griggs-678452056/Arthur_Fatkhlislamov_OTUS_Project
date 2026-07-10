@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 338}
   m_MaxSize: {x: 10000, y: 10000}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 112}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 108
+  controlID: 128
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 54
+  controlID: 61
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 109
+  controlID: 129
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -753,7 +753,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 0
-    m_Folders: []
+    m_Folders:
+    - Assets/Settings
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -767,7 +768,7 @@ MonoBehaviour:
   m_LastProjectPath: C:\Users\111\Desktop\Arthur_Fatkhlislamov_OTUS_Project\src\You'd
     Better Not Miss
   m_LockTracker:
-    m_IsLocked: 1
+    m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
@@ -779,8 +780,9 @@ MonoBehaviour:
     - m_Data: 0
     - m_Data: 790
     - m_Data: 19876
-    - m_Data: 49622
-    - m_Data: 49624
+    - m_Data: 46010
+    - m_Data: 49628
+    - m_Data: 49630
     - m_Data: 50632
     - m_Data: 50634
     - m_Data: 50636
@@ -871,6 +873,7 @@ MonoBehaviour:
     - m_Data: 50806
     - m_Data: 50808
     - m_Data: 50810
+    - m_Data: 50812
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -897,17 +900,18 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 240}
-    m_SelectedIDs: []
+    scrollPos: {x: 0, y: 512}
+    m_SelectedIDs:
+    - m_Data: 19876
     m_LastClickedID:
-      m_Data: 0
+      m_Data: 19876
     m_ExpandedIDs:
     - m_Data: 0
     - m_Data: 790
     - m_Data: 19876
     - m_Data: 46010
-    - m_Data: 49622
-    - m_Data: 49624
+    - m_Data: 49628
+    - m_Data: 49630
     - m_Data: 50632
     - m_Data: 50634
     - m_Data: 50636
@@ -918,7 +922,6 @@ MonoBehaviour:
     - m_Data: 50646
     - m_Data: 50648
     - m_Data: 50650
-    - m_Data: 50652
     - m_Data: 50654
     - m_Data: 50656
     - m_Data: 50658
@@ -955,7 +958,6 @@ MonoBehaviour:
     - m_Data: 50720
     - m_Data: 50722
     - m_Data: 50724
-    - m_Data: 50726
     - m_Data: 50728
     - m_Data: 50730
     - m_Data: 50732
@@ -979,6 +981,7 @@ MonoBehaviour:
     - m_Data: 50768
     - m_Data: 50770
     - m_Data: 50772
+    - m_Data: 50774
     - m_Data: 50776
     - m_Data: 50778
     - m_Data: 50780
@@ -997,8 +1000,10 @@ MonoBehaviour:
     - m_Data: 50806
     - m_Data: 50808
     - m_Data: 50810
-    - m_Data: 50956
-    - m_Data: 50962
+    - m_Data: 50812
+    - m_Data: 51004
+    - m_Data: 51274
+    - m_Data: 2147483647
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1025,8 +1030,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: []
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs:
+    - m_Data: 19876
+    m_LastClickedInstanceID: 19876
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: []
     m_RenameOverlay:
@@ -1893,7 +1899,7 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 0
+  m_LastSelectedObjectID: 44104
 --- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1935,20 +1941,12 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: []
+      m_SelectedIDs:
+      - m_Data: 19876
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -10960
-      - m_Data: -10656
-      - m_Data: -8726
-      - m_Data: -7692
-      - m_Data: -6646
-      - m_Data: -6604
-      - m_Data: -4702
-      - m_Data: -3604
       - m_Data: -1298
-      - m_Data: 51156
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
