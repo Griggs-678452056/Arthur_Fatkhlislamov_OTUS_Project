@@ -9,7 +9,7 @@
 /src/You'd Better Not Miss/[Bb]uild/
 /src/You'd Better Not Miss/[Bb]uilds/
 /src/You'd Better Not Miss/[Ll]ogs/
-/src/You'd Better Not Miss//[Uu]ser[Ss]ettings/
+/src/You'd Better Not Miss/[Uu]ser[Ss]ettings/
 *.log
 
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
